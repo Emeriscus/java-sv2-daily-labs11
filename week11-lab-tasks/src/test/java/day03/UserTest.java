@@ -2,6 +2,8 @@ package day03;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
@@ -15,5 +17,20 @@ class UserTest {
         user.addItem(item);
 
         assertEquals(119_890, user.getMoney());
+        assertEquals(LocalDate.of(2025, 1, 6), user.getItems().get(0).expiryDate);
+        assertEquals("milk", user.getItems().get(0).getName());
+        assertEquals("John", user.getUserName());
     }
+
+    @Test
+    void addItemNotEnoughMoney() {
+        Item item = new Product("tv", 120_001);
+
+        IllegalArgumentException expected = assertThrows(IllegalArgumentException.class,
+                () -> user.addItem(item));
+
+        assertEquals("Not enough money.", expected.getMessage());
+    }
+
+    @Test
 }
