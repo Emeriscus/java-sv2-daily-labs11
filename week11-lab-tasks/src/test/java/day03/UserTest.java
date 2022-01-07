@@ -17,7 +17,7 @@ class UserTest {
         user.addItem(item);
 
         assertEquals(119_890, user.getMoney());
-        assertEquals(LocalDate.of(2025, 1, 6), user.getItems().get(0).expiryDate);
+        assertEquals(LocalDate.now().plusYears(3), user.getItems().get(0).getExpiryDate());
         assertEquals("milk", user.getItems().get(0).getName());
         assertEquals("John", user.getUserName());
     }
@@ -32,5 +32,5 @@ class UserTest {
         assertEquals("Not enough money.", expected.getMessage());
     }
 
-    @Test
+    // @Test
 }

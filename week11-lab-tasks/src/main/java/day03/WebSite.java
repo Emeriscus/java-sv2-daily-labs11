@@ -8,10 +8,10 @@ public class WebSite {
     private List<Item> items = new ArrayList<>();
     private List<User> users = new ArrayList<>();
 
-    public void buyItem(String userName, String itemName) {
-        User user = getUser(userName);
-        Item item = getItem(itemName);
-    }
+//    public void buyItem(String userName, String itemName) {
+//        User user = getUser(userName);
+//        Item item = getItem(itemName);
+//    }
 
     private User getUser(String userName) {
         for (User actual : users) {

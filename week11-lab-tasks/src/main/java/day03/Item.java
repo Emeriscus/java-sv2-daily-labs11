@@ -26,4 +26,8 @@ public abstract class Item {
     }
 
     public abstract void setExpiryDate(LocalDate sellDate);
+
+//    {
+//        this.expiryDate = sellDate;
+//    }
 }
