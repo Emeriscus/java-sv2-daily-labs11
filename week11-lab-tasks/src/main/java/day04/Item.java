@@ -1,4 +1,4 @@
-package day03;
+package day04;
 
 import java.time.LocalDate;
 
@@ -26,8 +26,4 @@ public abstract class Item {
     }
 
     public abstract void setExpiryDate(LocalDate sellDate);
-
-//    {
-//        this.expiryDate = sellDate;
-//    }
 }

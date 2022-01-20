@@ -1,4 +1,4 @@
-package day03;
+package day04;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class User {
     }
 
     public List<Item> getItems() {
-        return items;
+        return List.copyOf(items);
     }
 
     public int getMoney() {

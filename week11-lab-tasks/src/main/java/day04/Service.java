@@ -1,4 +1,4 @@
-package day03;
+package day04;
 
 import java.time.LocalDate;
 
@@ -10,7 +10,6 @@ public class Service extends Item {
 
     @Override
     public void setExpiryDate(LocalDate sellDate) {
-//        super.setExpiryDate(sellDate.plusYears(1));
         expiryDate = sellDate.plusYears(1);
     }
 }
